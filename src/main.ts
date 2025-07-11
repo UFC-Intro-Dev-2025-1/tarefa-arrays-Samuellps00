@@ -15,30 +15,49 @@
 // 9. Criar um novo array com os valores dobrados usando o método map. ❌
 // 10. Calcular a soma de todos os elementos do array usando o método reduce. ❌
 
-const numeros: number[] = [10, 20, 30, 40, 50];
+const números: number[] = [10, 20, 30, 40, 50];
 
 function mostrarArray(array: number[]): void {
-    console.log('--------------------------------');
-    console.log(`Tamanho: `);
-    console.log(`Array: `);
+console.log('--------------------------------');
+console.log(`Tamanho: ${array.length}`);
+console.log(`Array: ${array}`);
 }
-mostrarArray(numeros);
 
+// 2. Criar uma função para exibir o array e seu tamanho. ✅
+// Já existe a função 'mostrarArray' que faz isso.
 
+// 1. Criar um array de números. ✅
+// O array 'números' já foi criado.
 
+// 3. Adicionar elementos 60 e 70 ao array.
+números.push(60, 70);
 
+// 4. Exibir o array usando a função mostrarArray.
+mostrarArray(números);
 
-const elementoExcluido = ;
-mostrarArray(numeros);
+// 5. Remover o último elemento do array usando o método pop.
+const elementoExcluido = números.pop();
+
+// 6. Exibir o array usando a função mostrarArray.
+mostrarArray(números);
+
+// 7. Mostrar o elemento excluído.
 console.log(`Elemento excluído: ${elementoExcluido}`);
 
-numeros.forEach();
+// 8. Mostrar cada elemento do array em uma linha usando o método forEach.
+console.log('--------------------------------');
+console.log('Elementos do array (forEach):');
+números.forEach(numero => console.log(numero));
 
-const dobrados = numeros.map();
+// 9. Criar um novo array com os valores dobrados usando o método map.
+const dobrados = números.map(numero => numero * 2);
+console.log('--------------------------------');
+console.log('Array com valores dobrados (map):');
 mostrarArray(dobrados);
 
-const soma = numeros.reduce();
+// 10. Calcular a soma de todos os elementos do array usando o método reduce.
+const soma = números.reduce((acumulador, numero) => acumulador + numero, 0);
+console.log('--------------------------------');
 console.log(`Soma dos elementos do array: ${soma}`);
-
 // para rodar o código, use o comando:
 // npm run build
